@@ -19,7 +19,7 @@ const browserSync = browserSyncModule.create();
 
 // HTML（EJS）コンパイル
 function compileHTML() {
-  return src(['src/**/*.ejs', '!src/**/_*.ejs'])
+  return src(['src/**/*.ejs', '!src/**/_*.ejs', '!src/components/**/*.ejs'])
     .pipe(plumber())
     .pipe(ejs({}, {}, { ext: '.html' }))
     .pipe(rename({ extname: '.html' }))
@@ -32,7 +32,7 @@ function compileHTML() {
 function compileCSS() {
   return src('src/**/*.scss', { base: 'src' })
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
     .pipe(dest('dist/assets'))  // assets配下に吐き出す
     .pipe(browserSync.stream());
@@ -63,9 +63,9 @@ function watchFiles() {
     }
   });
   watch('src/**/*.ejs', compileHTML);
-  watch('src/scss/**/*.scss', compileCSS);
-  watch('src/js/**/*.js', compileJS);
-  watch('src/images/**/*', compileIMG);
+  watch('src/**/*.scss', compileCSS);
+  watch('src/**/*.js', compileJS);
+  watch('src/**/*.{png,jpg,jpeg,gif}', compileIMG);
 }
 
 export { compileHTML, compileCSS, compileJS, compileIMG };
