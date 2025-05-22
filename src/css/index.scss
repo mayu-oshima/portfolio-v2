@@ -1,0 +1,734 @@
+@use './utils/mixin';
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+._pc-none {
+  @include mixin.pc {
+    display: none;
+  }
+}
+
+._sp-none {
+  @include mixin.sp {
+    display: none;
+  }
+}
+
+.sec_p {
+  padding: 90px 0;
+  @include mixin.sp {
+    padding: 55px 0;
+  }
+}
+.inner {
+  width: 980px;
+  margin: 0 auto;
+  @include mixin.sp {
+    width: 96%;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.5rem;
+  word-break: break-all;
+  line-height: 1.7;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: #333;
+  @include mixin.sp {
+    font-size: 1.3rem;
+  }
+  &.no-scroll {
+  //overflow: hidden;
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+.first_greeting {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  .text {
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    font-size: 7.5rem;
+    line-height: 1.4;
+    text-align: center;
+    .item {
+      clip-path: inset(0 100% 0 0);
+      
+    }
+  }
+}
+
+@keyframes leaf {
+  0% {
+    rotate: -3deg;
+  }
+  50% {
+    rotate: 3deg;
+  }
+  100% {
+    rotate: -3deg;
+  }
+}
+
+@keyframes shine {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: .5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes sparkling {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bird1 {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -30px;
+  }
+  100% {
+    translate: 0 0;
+  }
+
+}
+
+@keyframes bird1Right {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: -10deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+@keyframes bird1Left {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 10deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+
+@keyframes bird2 {
+  0% {
+    top: 63vw;
+    right: 0;
+  }
+  80% {
+    top: 0;
+    right: 80vw;
+  }
+  100% {
+    top: 0;
+    right: 80vw;
+  }
+
+}
+
+@keyframes bird2Right {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 15deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+@keyframes bird2Left {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: -15deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+
+.top_box {
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  padding-top: 13.33vw;
+  min-height: 100vh;
+  overflow: hidden;
+  @include mixin.sp {
+    padding-top: 150px;
+  }
+  .ttl_h1 {
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    font-size: 7.886rem;
+    line-height: 1.2;
+    @include mixin.sp {
+      font-size: 3.886rem;
+    }
+  }
+  .text {
+    line-height: 2.6666;
+    font-size: 1.8rem;
+    margin-top: 60px;
+    @include mixin.sp {
+      font-size: 1.5rem;
+      margin-top: 40px;
+    }
+  }
+  .nav_top {
+    margin-top: 60px;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        list-style-type: none;
+        + li {
+          margin-left: 60px;
+          position: relative;
+          @include mixin.sp {
+            margin-left: 40px;
+          }
+          &::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #336633;
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            translate: -50% -50%;
+            @include mixin.sp {
+              width: 10px;
+              height: 10px;
+              left: -20px;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          font-size: 4.148rem;
+          font-family: "Dancing Script", cursive;
+          color: #336633;
+          padding: 10px 20px;
+          line-height: 1.3;
+          @include mixin.sp {
+            font-size: 2.6rem;
+            padding: 7px 15px;
+          }
+        }
+      }
+    }
+  }
+  .leaf {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    .leaf_main {
+      width: 100vw;
+      height: calc((938 / 2000) * 100vw);
+      @include mixin.sp {
+        height:  calc((718 / 980) * 100vw);
+      }
+    }
+    .leaf_item {
+      position: absolute;
+      z-index: -10;
+      animation: leaf 5s ease infinite;
+      rotate: -3deg;
+      &.leaf01 {
+        left: 5vw;
+        top: 10vw;
+        width: 15vw;
+        transform-origin: top left;
+        animation-delay: -4s;
+        @include mixin.sp {
+          width: 25vw;
+        }
+      }
+      &.leaf02 {
+        left: 15vw;
+        top: 5vw;
+        width: 10vw;
+        transform-origin: top right;
+        animation-delay: -3s;
+        @include mixin.sp {
+          width: 17vw;
+        }
+      }
+      &.leaf03 {
+        left: 32vw;
+        top: -2vw;
+        width: 15vw;
+        transform-origin: top left;
+        animation-delay: -2s;
+        @include mixin.sp {
+          width: 25vw;
+        }
+      }
+      &.leaf04 {
+        left: 60vw;
+        top: 0vw;
+        width: 15vw;
+        transform-origin: top right;
+        animation-delay: 0s;
+        @include mixin.sp {
+          width: 25vw;
+        }
+      }
+      &.leaf05 {
+        left: 73vw;
+        top: 3vw;
+        width: 12vw;
+        transform-origin: top right;
+        animation-delay: -3s;
+        @include mixin.sp {
+          width: 20vw;
+        }
+      }
+      &.leaf06 {
+        left: 80vw;
+        top: 4vw;
+        width: 23vw;
+        transform-origin: top right;
+        animation-delay: -1s;
+        @include mixin.sp {
+          width: 23vw;
+        }
+      }
+    }
+    .shine_item {
+      position: absolute;
+      z-index: 10;
+      animation: shine 15s ease infinite;
+      &.shine01 {
+        left: 5vw;
+        top: 8vw;
+        width: 10vw;
+        animation-delay: -13s;
+      }
+      &.shine02 {
+        left: 10vw;
+        top: 2vw;
+        width: 12vw;
+        animation-delay: -1s;
+      }
+      &.shine03 {
+        left: 50vw;
+        top: -5vw;
+        width: 13vw;
+        animation-delay: -4s;
+      }
+      &.shine04 {
+        right: 10vw;
+        top: 5vw;
+        width: 10vw;
+        animation-delay: -9s;
+      }
+      &.shine05 {
+        right: 3vw;
+        top: 10vw;
+        width: 13vw;
+        animation-delay: -5s;
+      }
+      &.shine06 {
+        right: 1vw;
+        top: -3vw;
+        width: 10vw;
+        animation-delay: -4s;
+      }
+    }
+    .sparkling {
+      position: absolute;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      animation: sparkling 3s ease infinite;
+    }
+  }
+  .top_bird_01 {
+    position: absolute;
+    top: 20vw;
+    left: 22vw;
+    width: calc(172 / 1500 * 100vw);
+    animation: bird1 3s infinite ease;
+    z-index: -5;
+    .wing_left {
+      width: calc(119 / 1500 * 100vw);
+      position: absolute;
+      top: 31%;
+      left: 36%;
+      transform-origin: bottom left;
+      animation: bird1Left 1s infinite linear;
+      z-index: 10;
+    }
+    .wing_right {
+      width: calc(51 / 1500 * 100vw);
+      position: absolute;
+      bottom: 25%;
+      left: 33%;
+      transform-origin: bottom right;
+      animation: bird1Right 1s infinite linear;
+      z-index: -10;
+    }
+
+  }
+  .top_bird_02 {
+    position: absolute;
+    width: calc(107 / 1500 * 100vw);
+    animation: bird2 15s linear infinite;
+    translate: 200% -200%;
+    z-index: -50;
+    .wing_left {
+      width: calc(45 / 1500 * 100vw);
+      position: absolute;
+      top: 35%;
+      left: 23%;
+      transform-origin: top center;
+      animation: bird2Left 1s infinite linear;
+      z-index: 10;
+    }
+    .wing_right {
+      width: calc(38 / 1500 * 100vw);
+      position: absolute;
+      bottom: 55%;
+      left: 26%;
+      transform-origin: bottom center;
+      animation: bird2Right 1s infinite linear;
+      z-index: -10;
+    }
+  }
+}
+
+.sec_ttl {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 7.853rem;
+  line-height: 1.1;
+  color: #336633;
+  text-align: center;
+  margin-bottom: 55px;
+  @include mixin.sp {
+    font-size: 4.5rem;
+    margin-bottom: 40px;
+  }
+}
+
+@keyframes loop-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+section.works {
+  background: url(/assets/images/index/works_bg.jpg) center center / cover;
+  overflow: hidden;
+  .box_worksList {
+    .ttl_worksList {
+      text-align: center;
+      margin-bottom: 50px;
+      @include mixin.sp {
+        margin-bottom: 30px;
+      }
+      .text_ttl {
+        display: inline-block;
+        color: #363;
+        font-size: 3.5rem;
+        font-weight: 500;
+        padding: 0 70px;
+        position: relative;
+        @include mixin.sp {
+          font-size: 2.5rem;
+          padding: 0 40px;
+        }
+        &::before, &::after {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 2px;
+          background-color: #363;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          translate: 0 -50%;
+          @include mixin.sp {
+            width: 30px;
+            height: 1px;
+          }
+        }
+        &::after {
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+  }
+  .ul_works {
+    > li {
+      list-style-type: none;
+      opacity: 0;
+       + li {
+        margin-top: 50px;
+        @include mixin.sp {
+          margin-top: 30px;
+        }
+       }
+      > a {
+        display: flex;
+        border: 2px solid #336633;
+        text-decoration: none;
+        color: #333;
+        @include mixin.sp {
+          display: block;
+        }
+        .thumbnail_box {
+          display: flex;
+          align-items: center;
+          background-color: #f8fbe6;
+          .thumbnail {
+            width: 274px;
+            height: 185px;
+            object-fit: cover;
+            object-position: top;
+            @include mixin.sp {
+              width: 100%;
+              height: 64.1vw;
+            }
+          }
+        }
+        .info {
+          border-left: 2px solid #336633;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          @include mixin.sp {
+            border-left: none;
+            border-top: 2px solid #336633;
+          }
+          .text_area {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            @include mixin.sp {
+              padding: 15px;
+            }
+          }
+          .name_wrap {
+            display: flex;
+            border-bottom: 2px solid #336633;
+            min-height: 92px;
+            @include mixin.sp {
+              min-height: 50px;
+            }
+            .name {
+              width: 70%;
+              font-size: 2.4rem;
+              font-weight: 600;
+              @include mixin.sp {
+                font-size: 1.6rem;
+              }
+            }
+            .type {
+              border-left: 2px solid #336633;
+              flex: 1;
+              font-size: 2.0rem;
+              @include mixin.sp {
+                font-size: 1.3rem;
+              }
+            }
+          }
+          .tech_stack {
+            font-size: 2.4rem;
+            flex: 1;
+            @include mixin.sp {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .con_en_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    .en_box {
+      margin: 100px 0;
+      display: flex;
+      animation: loop-text 20s linear infinite;
+      @include mixin.sp {
+        margin: 50px 0;
+      }
+      .en_img {
+        width: 337vw;
+        max-width: none;
+        display: block;
+        margin-right: 5.33vw;
+      }
+    }
+  }
+}
+
+@keyframes rotation{
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(-360deg); }
+}
+
+section.skill {
+  position: relative;
+  padding-bottom: 38.33vw;
+  overflow: hidden;
+  &::after {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: calc( 180 / 1497 * 100vw);
+    background: url(/assets/images/index/skill_bg.png) no-repeat center bottom/ cover;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .ul_skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mixin.sp {
+      display: block;
+    }
+    > li {
+      width: 48.5%;
+      border: 2px solid #336633;
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      @include mixin.sp {
+        width: 100%;
+        padding: 15px 20px;
+      }
+      @include mixin.pc {
+        &:nth-child(n+3) {
+          margin-top: 25px;
+        }
+      }
+      @include mixin.sp {
+        &:nth-child(n+2) {
+          margin-top: 20px;
+        }
+      }
+      .icon {
+        width: 23%;
+        margin-right: 20px;
+        @include mixin.sp {
+          margin-right: 15px;
+        }
+      }
+      .text_wrap {
+        .name {
+          font-size: 2.725rem;
+          font-weight: 600;
+          margin-bottom: 8px;
+          line-height: 1.2;
+          @include mixin.sp {
+            font-size: 2.0rem;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+  .deco_en {
+    position: absolute;
+    width: 41.3333vw;
+    right: -10vw;
+    bottom: -5.33vw;
+    animation: 10s linear infinite rotation;
+    z-index: -10;
+    @include mixin.sp {
+
+    }
+  }
+}
+
+section.about {
+  background-color: #fdfcd8;
+  margin-top: -1px;
+  .box_about {
+    display: flex;
+    align-items: center;
+    @include mixin.sp {
+      flex-direction: column;
+    }
+    .photo {
+      width: 316px;
+      margin-right: 50px;
+      @include mixin.sp {
+        width: 70%;
+        margin-right: 0;
+        max-width: 316px;
+        margin-bottom: 40px;
+      }
+    }
+    .text {
+      .item_text {
+        & + .item_text {
+          margin-top: 40px;
+          @include mixin.sp {
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
+}

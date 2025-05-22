@@ -1,0 +1,18 @@
+<ul class="ul_works">
+  <% for(let item of arrayWorks) { %>
+  <li>
+    <a href="<%- item.url %>">
+      <div class="thumbnail_box">
+        <img class="thumbnail" src="<%- item.thumbnail %>" alt="<%- item.name %>">
+      </div>
+      <div class="info">
+        <div class="name_wrap">
+          <p class="name text_area"><%- item.name %></p>
+          <p class="type text_area"><%- item.type %></p>
+        </div>
+        <p class="tech_stack text_area"><%- item.tech_stack %></p>
+      </div>
+    </a>
+  </li>
+  <% } %>
+</ul>

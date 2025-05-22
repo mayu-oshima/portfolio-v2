@@ -1,0 +1,263 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+  </head>
+  <body>
+    <div class="first_greeting">
+      <p class="text">
+        <span class="item">Crafted with care and heart. </span><br>
+        <span class="item">Please have a look.</span>
+      </p>
+    </div>
+    <main>
+      <div class="top_box sec_p">
+        <div class="inner">
+          <h1 class="ttl_h1">
+            Mayu Oshima<br>
+            portfolio
+          </h1>
+          <p class="text">
+            ポートフォリオサイトをご覧いただき<br class="_pc-none">ありがとうございます。<br>
+            日々学びを重ねながら、<br>
+            丁寧にコツコツと制作に取り組んでいます。
+          </p>
+          <nav class="nav_top">
+            <ul>
+              <li>
+                <a href="#works">Works</a>
+              </li>
+              <li>
+                <a href="#skill">Skill</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="leaf">
+          <img class="leaf_main _sp-none" src="/assets/images/index/top_leaf/leaf_main.png" alt="">
+          <img class="leaf_main _pc-none" src="/assets/images/index/top_leaf/leaf_main_sp.png" alt="">
+
+          <!-- 葉 -->
+          <img class="leaf_item leaf01" src="/assets/images/index/top_leaf/leaf03.png" alt="">
+          <img class="leaf_item leaf02" src="/assets/images/index/top_leaf/leaf02.png" alt="">
+          <img class="leaf_item leaf03" src="/assets/images/index/top_leaf/leaf04.png" alt="">
+          <img class="leaf_item leaf04" src="/assets/images/index/top_leaf/leaf01.png" alt="">
+          <img class="leaf_item leaf05" src="/assets/images/index/top_leaf/leaf02.png" alt="">
+          <img class="leaf_item leaf06" src="/assets/images/index/top_leaf/leaf02.png" alt="">
+
+          <!-- 光 -->
+          <img class="shine_item shine01" src="/assets/images/index/top_leaf/shine.png" alt="">
+          <img class="shine_item shine02" src="/assets/images/index/top_leaf/shine.png" alt="">
+          <img class="shine_item shine03" src="/assets/images/index/top_leaf/shine.png" alt="">
+          <img class="shine_item shine04" src="/assets/images/index/top_leaf/shine.png" alt="">
+          <img class="shine_item shine05" src="/assets/images/index/top_leaf/shine.png" alt="">
+          <img class="shine_item shine06" src="/assets/images/index/top_leaf/shine.png" alt="">
+          <img class="sparkling" src="/assets/images/index/top_leaf/shine02.png" alt="">
+
+        </div>
+
+        <div class="top_bird_01">
+          <img class="bird_body" src="/assets/images/index/top_bird/bird_01_body.png" alt="">
+          <img class="wing_left" src="/assets/images/index/top_bird/bird_01_left.png" alt="">
+          <img class="wing_right" src="/assets/images/index/top_bird/bird_01_right.png" alt="">
+        </div>
+        <div class="top_bird_02">
+          <img class="bird_body" src="/assets/images/index/top_bird/bird_02_body.png" alt="">
+          <img class="wing_left" src="/assets/images/index/top_bird/bird_02_left.png" alt="">
+          <img class="wing_right" src="/assets/images/index/top_bird/bird_02_right.png" alt="">
+        </div>
+      </div>
+
+      <section id="works" class="works sec_p">
+        <div class="inner">
+          <h2 class="sec_ttl">Works</h2>
+          <div class="box_worksList">
+            <h3 class="ttl_worksList"><span class="text_ttl">Webサイト</span></h3>
+            <%- include('components/worksList', {arrayWorks: [
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: 'ポートフォリオサイト（当サイト）',
+                type: 'Webサイト',
+                tech_stack: 'Gulp / GSAP / JavaScript / HTML(EJS) / CSS(Sass)'
+              },
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: 'カフェ「オムライスの森」(架空)',
+                type: 'Web<br>アプリケーション',
+                tech_stack: 'WordPress (CMS) / PHP / JavaScript '
+              },
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: 'ファッション通販サイト「closetta」<br>(架空)',
+                type: 'Web<br>アプリケーション',
+                tech_stack: 'React / TypeScript'
+              },
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: '総合病院「小林病院」(架空)',
+                type: 'Webサイト',
+                tech_stack: 'HTML / CSS'
+              },
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: '美容院「SALA」(架空)',
+                type: 'Webサイト',
+                tech_stack: 'HTML / CSS'
+              },
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: 'わんこあわせ（ゲームアプリ）',
+                type: 'Web<br>アプリケーション',
+                tech_stack: 'React / TypeScript'
+              },
+            ]}) %>
+          </div>
+        </div>
+        <div class="con_en_box">
+          <div class="en_box">
+            <img class="en_img" src="/assets/images/index/works_en.png" alt="">
+            <img class="en_img" src="/assets/images/index/works_en.png" alt="">
+          </div>
+        </div>
+        <div class="inner">
+          <div class="box_worksList">
+            <h3 class="ttl_worksList"><span class="text_ttl">バナー</span></h3>
+            <%- include('components/worksList', {arrayWorks: [
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: 'ファッション通販サイト<br>「FASHION SHOP」(架空)',
+                type: 'バナー',
+                tech_stack: 'Illustrator / Photoshop'
+              },
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: '「白石ピアノ教室」(架空)',
+                type: 'バナー',
+                tech_stack: 'Illustrator / Photoshop'
+              },
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: '音響機器メーカー(架空)',
+                type: 'バナー',
+                tech_stack: 'Illustrator / Photoshop'
+              },
+              {
+                url: 'http://localhost:3000/',
+                thumbnail: '/assets/images/index/work_list/omuraisu.jpg',
+                name: 'カフェ「Milky Cafe」(架空)',
+                type: 'バナー',
+                tech_stack: 'Illustrator / Photoshop'
+              },
+            ]}) %>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="skill" class="skill sec_p">
+        <div class="inner">
+          <h2 class="sec_ttl">Skill</h2>
+          <ul class="ul_skill">
+            <%
+              const arraySkill = [
+                {
+                  icon: '/assets/images/index/skill_icon/javascript.png',
+                  name: 'JavaScript',
+                  text: 'タブ切り替えや、アコーディオン、スライドショーなどの動的なインターフェースを実装できます。GSAPも学習中です。',
+                },
+                {
+                  icon: 'https://cdn.simpleicons.org/php/777BB4',
+                  name: 'PHP',
+                  text: 'WordPressのオリジナルテーマでのCMS構築が可能です。',
+                },
+                {
+                  icon: '/assets/images/index/skill_icon/html_css.png',
+                  name: 'HTML5/CSS3',
+                  text: 'レスポンシブ対応を含め、構造的かつ視認性の高いコーディングが可能です。SCSS（Sass）やEJSでのコーディングが得意です。',
+                },
+                {
+                  icon: '/assets/images/index/skill_icon/ps-ai.png',
+                  name: 'Photoshop / Illustrator',
+                  text: 'バナーやWebページのデザイン制作が可能です。デザインカンプをもとにした正確なコーディングにも対応しています。',
+                },
+                {
+                  icon: 'https://cdn.simpleicons.org/gulp/CF4647',
+                  name: 'Gulp',
+                  text: 'Gulpを用いた開発環境をゼロから構築でき、不具合対応も含めて現場で実践しています。',
+                },
+                {
+                  icon: 'https://cdn.simpleicons.org/git/F05032',
+                  name: 'Git',
+                  text: '基本的なバージョン管理やチーム開発でのブランチ運用を理解し、実務で活用しています。',
+                },
+                {
+                  icon: 'https://cdn.simpleicons.org/wordpress/21759B',
+                  name: 'WordPress（CMS）',
+                  text: '既存テーマのカスタマイズやカスタム投稿タイプの実装に対応できます。',
+                },
+                {
+                  icon: 'https://cdn.simpleicons.org/react/61DAFB',
+                  name: 'React',
+                  text: '書籍や作品制作を通じて学習中です。状態管理やコンポーネント設計など、実務対応を目指しています。',
+                },
+              ];
+            %>
+            <% for(let item of arraySkill) { %>
+            <li>
+              <img class="icon" src="<%- item.icon %>" alt="<%- item.name %>">
+              <div class="text_wrap">
+                <h3 class="name"><%- item.name %></h3>
+                <p class="text">
+                  <%- item.text %>
+                </p>
+              </div>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+        <img class="deco_en" src="/assets/images/index/skill_en.png" alt="">
+      </section>
+
+      <section id="about" class="about sec_p">
+        <div class="inner">
+          <h2 class="sec_ttl">About</h2>
+          <div class="box_about">
+            <img class="photo" src="/assets/images/index/about_photo.jpg" alt="">
+            <div class="text">
+              <p class="item_text">
+                はじめまして。ポートフォリオをご覧いただきありがとうございます。
+              </p>
+              <p class="item_text">
+                制作会社にてフロントエンドエンジニアとしてWebサイト制作に携わってきました。<br>
+                HTML/CSS/JavaScriptを用いたコーディングを中心に、開発環境の整備やCMS構築、デザイン作業など幅広い業務を経験しています。
+              </p>
+              <p class="item_text">
+                これまでの経験を通して、「見た目の美しさ」と「使いやすさ」を両立させることの大切さを実感してきました。<br>
+                今後はさらに専門的な知識と技術を深めながら、ユーザーにもクライアントにもやさしいWebサイトを目指していきたいと考えています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- GSAPとScrollTriggerをCDNで読み込む -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="/assets/js/index.min.js"></script>
+  </body>
+</html>
