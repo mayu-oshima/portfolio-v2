@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <%- include('../components/head', {
+    styles: [
+      '__BASE_URL__assets/works/css/work.css',
+    ],
+    scripts: [
+    ]
+  }) %>
+
+  <body>
+    <header class="header_child sec_p">
+      <%- include('../components/fixed_menu', {top: false}) %>
+      <div class="inner">
+        <a class="ttl_site" href="__BASE_URL__">
+          Mayu Oshima<br>
+          portfolio
+        </a>
+        <nav class="nav_top">
+          <ul>
+            <li>
+              <a href="__BASE_URL__#works">Works</a>
+            </li>
+            <li>
+              <a href="__BASE_URL__#skill">Skill</a>
+            </li>
+            <li>
+              <a href="__BASE_URL__#about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="work sec_p">
+        <div class="inner">
+          <h1 class="h1_ttl"><%- work.title %></h1>
+          <p class="top_text"><%- work.top_text %></p>
+          <% if(work.box_btn) { %>
+          <div class="box_btn">
+            <a class="btn" href="<%- work.box_btn.website %>" target="_blank">Visit Website</a>
+            <a class="btn source" href="<%- work.box_btn.source %>" target="_blank">View Source</a>
+          </div>
+          <% } %>
+          <div class="box_desc">
+            <div class="box_main_photo<% if(work.type === 'banner') { %> banner<% } %>">
+              <img class="main_photo" src="<%- work.main_photo %>" alt="<%- work.title %>">
+            </div>
+            <div class="desc">
+              <div class="info">
+                <p class="tag">技術</p>
+                <p class="text"><%- work.tech_stack.join(' / ') %></p>
+              </div>
+              <div class="info">
+                <p class="tag">範囲</p>
+                <p class="text"><%- work.scope.join('、') %></p>
+              </div>
+              <div class="desc_wrap">
+                <div class="item_desc">
+                  <h2 class="ttl_item_desc">ターゲット・目的</h2>
+                  <p class="text_item_desc">
+                    <%- work.target_purpose %>
+                  </p>
+                </div>
+                <div class="item_desc">
+                  <h2 class="ttl_item_desc">制作ポイント</h2>
+                  <p class="text_item_desc">
+                    <%- work.point.top_text %>
+                  </p>
+                  <%
+                  if(work.point.sub_item) {
+                  for(const item of work.point.sub_item) {
+                  %>
+                  <div class="sub_item">
+                    <h3 class="ttl_sub_item"><%- item.ttl %></h3>
+                    <p class="text_sub_item">
+                      <%- item.text %>
+                    </p>
+                  </div>
+                  <%
+                    }
+                    }
+                  %>
+                </div>
+                <%
+                if(work.memo) {
+                for(const item of work.memo) {
+                %>
+                <div class="memo">
+                  <p class="text"><%- item.text %></p>
+                  <% if(item.box_img) {%>
+                  <div class="box">
+                    <div class="box_item">
+                      <% for(const img of item.box_img.left) { %>
+                      <img src="<%- img.src %>" alt="<%- img.alt %>">
+                      <% } %>
+                    </div>
+                    <div class="box_item">
+                      <% for(const img of item.box_img.right) { %>
+                      <img src="<%- img.src %>" alt="<%- img.alt %>">
+                      <% } %>
+                    </div>
+                  </div>
+                  <% } %>
+                </div>
+                <%
+                  }
+                  }
+                %>
+
+                <% if(work.box_btn) { %>
+                <div class="box_btn">
+                  <a class="btn" href="<%- work.box_btn.website %>" target="_blank">Visit Website</a>
+                  <a class="btn source" href="<%- work.box_btn.source %>" target="_blank">View Source</a>
+                </div>
+                <% } %>
+              </div>
+            </div>
+          </div>
+          <div class="box_btn more_works">
+            <a class="btn" href="__BASE_URL__#works">View More Works</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+
+</html>

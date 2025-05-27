@@ -1,16 +1,16 @@
 <ul class="ul_works">
   <% for(let item of arrayWorks) { %>
   <li>
-    <a href="<%- item.url %>">
+    <a href="__BASE_URL__works/<%- item.id %>.html">
       <div class="thumbnail_box">
-        <img class="thumbnail" src="<%- item.thumbnail %>" alt="<%- item.name %>">
+        <img class="thumbnail" src="<%- item.main_photo %>" alt="<%- item.title %>">
       </div>
       <div class="info">
         <div class="name_wrap">
-          <p class="name text_area"><%- item.name %></p>
-          <p class="type text_area"><%- item.type %></p>
+          <p class="name text_area"><%- item.title %></p>
+          <p class="type text_area"><%- item.subtype %></p>
         </div>
-        <p class="tech_stack text_area"><%- item.tech_stack %></p>
+        <p class="tech_stack text_area"><%- item.tech_stack.join(' / ') %></p>
       </div>
     </a>
   </li>

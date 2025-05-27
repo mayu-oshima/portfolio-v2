@@ -1,0 +1,16 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="__BASE_URL__assets/css/reset.css">
+  <link rel="stylesheet" href="__BASE_URL__assets/css/common.css">
+  <% for(const item of styles) { %>
+  <link rel="stylesheet" href="<%- item %>">
+  <% } %>
+  <!-- GSAPとScrollTriggerをCDNで読み込む -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  <script src="__BASE_URL__assets/js/common.min.js" defer></script>
+  <% for(const item of scripts) { %>
+  <script src="<%- item %>" defer></script>
+  <% } %>
+</head>

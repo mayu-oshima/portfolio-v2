@@ -1,0 +1,355 @@
+@use '../../css/utils/mixin';
+
+header.header_child {
+  text-align: center;
+  .ttl_site {
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    font-size: 3.886rem;
+    line-height: 1.2;
+    color: #333;
+    text-decoration: none;
+    @include mixin.sp {
+      font-size: 2.8rem;
+    }
+  }
+  .nav_top {
+    margin-top: 50px;
+    @include mixin.sp {
+      margin-top: 30px;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        list-style-type: none;
+        + li {
+          margin-left: 60px;
+          position: relative;
+          @include mixin.sp {
+            margin-left: 30px;
+          }
+          &::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #336633;
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            translate: -50% -50%;
+            @include mixin.sp {
+              width: 10px;
+              height: 10px;
+              left: -15px;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          font-size: 4.148rem;
+          font-family: "Dancing Script", cursive;
+          color: #336633;
+          padding: 10px 20px;
+          line-height: 1.3;
+          @include mixin.sp {
+            font-size: 2.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.work {
+  padding-top: 0;
+  .h1_ttl {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #363;
+    text-align: center;
+    @include mixin.sp {
+      font-size: 2.0rem;
+    }
+  }
+  .top_text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    @include mixin.sp {
+      margin-top: 15px;
+      font-size: 1.4rem;
+    }
+  }
+  .box_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    @include mixin.sp {
+      display: block;
+      margin-top: 25px;
+    }
+    .btn {
+      border: 2px solid #363;
+      text-decoration: none;
+      color: #363;
+      display: block;
+      padding: 10px 30px;
+      padding-right: 70px;
+      font-size: 1.8rem;
+      letter-spacing: .03em;
+      position: relative;
+      line-height: 1.3;
+      min-width: 220px;
+      max-width: 300px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .4s ease;
+      @include mixin.sp {
+        min-width: 0;
+        max-width: none;
+        width: 100%;
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 7px;
+        border-color: #363;
+        border-style: solid;
+        border-width: 0 3px 1px 0;
+        transform: skewX(65deg);
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        translate: 0 -50%;
+      }
+      &.source {
+        border-color: #333;
+        color: #333;
+        margin-left: 40px;
+        @include mixin.sp {
+          margin-left: 0;
+          margin-top: 15px;
+        }
+        &::after {
+          border-color: #333;
+        }
+        &:hover {
+        background-color: #333;
+        }
+      }
+      &:hover {
+        background-color: #363;
+        color: #fff;
+        &::after {
+          border-color: #fff;
+        }
+      }
+
+    }
+    &.more_works {
+      margin-top: 70px;
+      @include mixin.sp {
+        margin-top: 50px;
+      }
+    }
+  }
+  .box_desc {
+    border: 2px solid #363;
+    margin-top: 50px;
+    @include mixin.sp {
+      margin-top: 40px;
+    }
+    .box_main_photo {
+      border-bottom: 2px solid #363;
+      display: flex;
+      justify-content: center;
+      &.banner {
+        padding: 80px 0;
+         @include mixin.sp {
+            padding: 20px 0;
+         }
+        .main_photo {
+          border: 1px solid #e6e6e6;
+        }
+      }
+    }
+    .desc {
+      .info {
+        display: flex;
+        padding: 2px;
+        border-bottom: 2px solid #363;
+        line-height: 1.5;
+        .tag {
+          background-color: #363;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 18px 30px;
+          padding-left: 40px;
+          position: relative;
+          font-size: 1.7rem;
+          @include mixin.sp {
+            padding: 10px 10px;
+            padding-left: 15px;
+            font-size: 1.5rem;
+          }
+          &::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 100%;
+            background-color: #363;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+            position: absolute;
+            top: 0;
+            left: 100%;
+            @include mixin.sp {
+              width: 20px;
+            }
+          }
+        }
+        .text {
+          flex: 1;
+          font-size: 2.0rem;
+          font-weight: 500;
+          color: #363;
+          padding: 18px 30px;
+          padding-left: 60px;
+          @include mixin.sp {
+            font-size: 1.5rem;
+            padding: 12px 15px;
+            padding-left: 30px;
+          }
+        }
+      }
+      .desc_wrap {
+        padding: 50px;
+        @include mixin.sp {
+          padding: 15px;
+        }
+        .item_desc {
+          background-color: #edfaeb;
+          padding: 30px 40px;
+          @include mixin.sp {
+            padding: 15px 20px;
+          }
+          .ttl_item_desc {
+            padding-left: 45px;
+            position: relative;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            font-weight: 600;
+            @include mixin.sp {
+              padding-left: 30px;
+              margin-bottom: 5px;
+              font-size: 1.6rem;
+            }
+            &::before {
+              content: '';
+              display: block;
+              width: 30px;
+              height: 2px;
+              background-color: #363;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              translate: 0 -50%;
+              @include mixin.sp {
+                width: 17px;
+              }
+            }
+          }
+          &+ .item_desc {
+            margin-top: 40px;
+            @include mixin.sp {
+              margin-top: 15px;
+            }
+          }
+          .sub_item {
+            margin-top: 30px;
+            @include mixin.sp {
+              margin-top: 16px;
+            }
+            .ttl_sub_item {
+              padding-left: 30px;
+              margin-bottom: 10px;
+              font-size: 1.8rem;
+              font-weight: 500;
+              position: relative;
+              @include mixin.sp {
+                padding-left: 17px;
+                margin-bottom: 7px;
+                font-size: 1.4rem;
+              }
+              &::before {
+                content: '';
+                display: block;
+                width: 15px;
+                height: 15px;
+                background-color: #363;
+                border-radius: 50%;
+                position: absolute;
+                top: .5em;
+                left: 0;
+                @include mixin.sp {
+                  width: 10px;
+                  height: 10px;
+                }
+              }
+            }
+          }
+        }
+        .memo {
+          margin-top: 40px;
+          @include mixin.sp {
+            margin-top: 30px;
+          }
+          .text {
+            margin-bottom: 20px;
+            @include mixin.sp {
+              margin-bottom: 13px;
+            }
+          }
+          .box {
+            display: flex;
+            justify-content: space-between;
+            @include mixin.sp {
+              display: block;
+            }
+            .box_item {
+              width: 49%;
+              @include mixin.sp {
+                width: 100%;
+                & + .box_item {
+                  margin-top: 13px;
+                }
+              }
+              img {
+                width: 100%;
+                border: 1px solid #e6e6e6;
+                & + img {
+                  margin-top: 20px;
+                  @include mixin.sp {
+                    margin-top: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .box_btn {
+          margin-top: 70px;
+          @include mixin.sp {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}

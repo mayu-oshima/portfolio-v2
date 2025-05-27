@@ -1,0 +1,399 @@
+[
+  {
+    "id": "portfolio",
+    "title": "ポートフォリオサイト（当サイト）",
+    "type": "website",
+    "subtype": "Webサイト",
+    "top_text": "現在ご覧いただいているサイトです",
+    "box_btn": {
+      "website": "https://closetta.vercel.app/",
+      "source": "https://github.com/mayu-oshima/closetta/"
+    },
+    "main_photo": "__BASE_URL__assets/works/images/portfolio/main.png",
+    "tech_stack": [
+      "Gulp",
+      "GSAP",
+      "JavaScript",
+      "HTML(EJS)",
+      "CSS(Sass)",
+      "Git"
+    ],
+    "scope": [
+      "設計",
+      "コーディング",
+      "ビルド環境構築（Gulp）"
+    ],
+    "target_purpose": "Web制作会社や開発チームの採用担当者様へ向けて、これまでの経験を活かして制作した成果物をまとめたポートフォリオサイトを作成しました。<br>「見やすく、楽しく、そして伝わる」ことを意識しました。",
+    "point": {
+      "top_text": "ビルド環境構築からデザイン・コーディングまで対応しました。以下の点を特に工夫しています。",
+      "sub_item": [
+        {
+          "ttl": "Gulpによる効率的なビルド環境の構築",
+          "text": "HTML（EJS）、CSS（Sass）、JavaScriptの圧縮などを自動化しました。<br>変更のたびに即時反映されるライブリロードも導入し、開発効率を大幅に向上させました。"
+        },
+        {
+          "ttl": "JSONとEJSを組み合わせたページの自動生成",
+          "text": "作品情報は全て works.json にまとめ、テンプレート（EJS）と連携することで、各作品の静的ページを動的に生成、サイトトップの作品リストへも自動的に表示させました。<br>データを追記するだけで新規ページが出力され、保守性と再利用性の高い仕組みを実現しました。"
+        },
+        {
+          "ttl": "保守性の高いディレクトリ構成とコンポーネント設計",
+          "text": "SassやEJSの共通パーツの分割により、変更や機能追加時の影響範囲を最小限にして、開発規模が大きくなっても対応しやすい設計を意識しました。"
+        },
+        {
+          "ttl": "GSAPとScrollTriggerを活用した動きのあるUI演出",
+          "text": "スクロール位置に応じて要素がアニメーション表示される仕組みを実装しました。<br>閲覧体験を向上させるだけでなく、JavaScriptとアニメーションライブラリへの理解も深めました"
+        }
+      ]
+    },
+    "memo": [
+      {
+        "text": "works.jsonを編集すると作品の個別ページとサイトTOPの一覧へ同時に反映",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/portfolio/json/code.png",
+              "alt": "「メニュー」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/portfolio/json/work.png",
+              "alt": "メニュー個別ページ"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/portfolio/json/top_works.png",
+              "alt": "メニュー一覧ページ"
+            }
+          ]
+        }
+      },
+      {
+        "text": "全ページで使うバンガーメニューなどはコンポーネントにして一つのファイルで管理",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/portfolio/hamburger/code01.png",
+              "alt": "「お知らせ」の編集画面"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/portfolio/hamburger/code02.png",
+              "alt": "「お知らせ」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/portfolio/hamburger/menu.png",
+              "alt": "TOPページ「お知らせ」"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "omelet-rice",
+    "title": "カフェ「オムライスの森」",
+    "type": "website",
+    "subtype": "Web<br>アプリケーション",
+    "top_text": "架空のカフェ「オムライスの森」のWebサイトです。",
+    "box_btn": {
+      "website": "https://omser9696.com/",
+      "source": "https://github.com/mayu-oshima/omelet-rice/"
+    },
+    "main_photo": "__BASE_URL__assets/works/images/omelet-rice/main.png",
+    "tech_stack": [
+      "WordPress(CMS)",
+      "PHP",
+      "JavaScript"
+    ],
+    "scope": [
+      "設計",
+      "コーディング",
+      "CMS構築"
+    ],
+    "target_purpose": "食事をする場所を探している人に向けて、お店の認知拡大と新規顧客獲得を目的としたサイトです。<br>優しく温かみのあるデザインで、店舗の雰囲気をWeb上でも感じてもらえるように制作しました。",
+    "point": {
+      "top_text": "WordPressを用いて飲食店サイトのCMS構築を行いました。店舗スタッフでも更新可能な構成を意識しつつ、デザイン・機能性の両面で工夫を加えています。",
+      "sub_item": [
+        {
+          "ttl": "「お知らせ」セクションをカスタムフィールドで管理",
+          "text": "メニュー一覧はWordPressの投稿機能を活用し、カスタムフィールドを使ってサムネイル・価格・税込価格を一括管理。投稿を追加するだけで新メニューを簡単に個別ページと一覧ページへ反映できます。"
+        },
+        {
+          "ttl": "メニュー管理を投稿タイプで実装",
+          "text": "最大5件までのニュースを表示できるよう、カスタムフィールドをループで処理。管理画面から日付とテキストを入力するだけでお知らせを更新でき、静的HTML修正が不要な設計としています。"
+        },
+        {
+          "ttl": "動きをつけたビジュアル構成",
+          "text": "サイトに訪問した人が最初に見るTOPページには、ユーザーのスクロールに応じてコンテンツが出てくる動きをつけて、店内に入っていくような温かみとリズム感を与えるようにして、視覚的な印象強化とユーザーの滞在時間増加を図っています。"
+        }
+      ]
+    },
+    "memo": [
+      {
+        "text": "新メニューを投稿で追加すると個別ページと一覧ページへ反映",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/menu_edit.png",
+              "alt": "「メニュー」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/menu.png",
+              "alt": "メニュー個別ページ"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/menu2.png",
+              "alt": "メニュー一覧ページ"
+            }
+          ]
+        }
+      },
+      {
+        "text": "「お知らせ」をカスタムフィールドで管理",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/news_edit.png",
+              "alt": "「お知らせ」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/news.png",
+              "alt": "TOPページ「お知らせ」"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "closetta",
+    "title": "洋服通販サイト「closetta」（架空）",
+    "type": "website",
+    "subtype": "Web<br>アプリケーション",
+    "top_text": "架空の洋服通販サイトです。",
+    "box_btn": {
+      "website": "https://closetta.vercel.app/",
+      "source": "https://github.com/mayu-oshima/closetta/"
+    },
+    "main_photo": "__BASE_URL__assets/works/images/closetta.png",
+    "tech_stack": [
+      "React",
+      "JavaScript （TypeScript）",
+      "HTML・CSS"
+    ],
+    "scope": [
+      "設計",
+      "コーディング"
+    ],
+    "target_purpose": "上品さや落ち着きを求めつつも、トレンドを意識したファッションに関心がある層である20代後半〜30代の女性をターゲットとした総合ファッション通販サイトです。<br>“スタイリッシュ × ナチュラル”をコンセプトに、視覚的にも操作性にも配慮しました。",
+    "point": {
+      "top_text": "React + TypeScriptでファッション通販サイトを制作しました。以下の点を特に工夫しています。",
+      "sub_item": [
+        {
+          "ttl": "商品ページのルーティング設計",
+          "text": "React Router を用いて、商品一覧・詳細・カート・注文完了ページへの遷移を実装。<br>URLパラメータを活用して、商品IDから動的に詳細情報を表示できる構成にしています。"
+        },
+        {
+          "ttl": "カート機能のグローバル管理",
+          "text": "React Context を使ってカートの状態（商品情報や数量など）を全体で共有。<br>追加・削除・リセットなどのロジックをContext内にまとめて、各ページから操作できるようにしました。"
+        },
+        {
+          "ttl": "Firebaseを使ったユーザー情報の保存",
+          "text": "Firebase Authenticationでユーザーを認証し、注文時にFirestoreを使用してユーザーデータ（お届け先やお支払い方法）を保存するようになっています。<br>次回からの入力を省略できるようにして、ユーザーの利便性を向上させました。"
+        },
+        {
+          "ttl": "styled-componentsによるUI設計",
+          "text": "styled-componentsで各パーツをコンポーネント単位に分離。<br>配色やタイポグラフィ、余白などを整え、ECサイトらしい清潔感ある見た目に仕上げました。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kobayasi",
+    "title": "総合病院「小林病院」（架空）",
+    "type": "website",
+    "subtype": "Webサイト",
+    "top_text": "架空の総合病院のWebサイトです。",
+    "box_btn": {
+      "website": "https://portfolio-mayu-oshimas-projects.vercel.app/work/website/kobayasi/",
+      "source": "https://github.com/mayu-oshima/closetta/"
+    },
+    "main_photo": "__BASE_URL__assets/works/images/kobayashi.png",
+    "tech_stack": [
+      "JavaScript （TypeScript）",
+      "HTML・CSS"
+    ],
+    "scope": [
+      "設計",
+      "コーディング"
+    ],
+    "target_purpose": "総合病院なので幅広い年齢層の方々がターゲットとなるため、どんな人でも使いやすく分かりやすい信頼と安心感を感じるようなサイトを目指しました。",
+    "point": {
+      "top_text": "React + TypeScriptでファッション通販サイトを制作しました。以下の点を特に工夫しています。",
+      "sub_item": [
+        {
+          "ttl": "高齢者・弱視ユーザーへの配慮設計",
+          "text": "視力の弱い人や高齢者にも配慮し、JavaScriptを使って文字サイズを動的に変更できるボタンを実装しました。CSSのrem単位をベースに設計することで、全体のレイアウト崩れを防ぎつつ、ユーザーが視認性を調整できるようにしました。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sala",
+    "title": "美容院「sala」（架空）",
+    "type": "website",
+    "subtype": "Webサイト",
+    "top_text": "架空の美容院のWebサイトです。",
+    "box_btn": {
+      "website": "https://portfolio-mayu-oshimas-projects.vercel.app/work/website/sala/",
+      "source": "https://github.com/mayu-oshima/closetta/"
+    },
+    "main_photo": "__BASE_URL__assets/works/images/sala.png",
+    "tech_stack": [
+      "JavaScript （TypeScript）",
+      "HTML・CSS"
+    ],
+    "scope": [
+      "設計",
+      "コーディング"
+    ],
+    "target_purpose": "20〜40代の男女をターゲットとして新規顧客の獲得とリピートユーザーの再訪を目指しました。<br>白黒でシンプルでクールにまとめたサイトにました。",
+    "point": {
+      "top_text": "以下の点を特に工夫しています。",
+      "sub_item": [
+        {
+          "ttl": "コンバージョン最適化",
+          "text": "予約ボタンを右下に固定して、ユーザーがページ内のどこにいてもすぐに予約へアクセスできるようにし、ユーザビリティを高めることでコンバージョン率の向上を狙いました。"
+        },
+        {
+          "ttl": "保守性を考えたコーディング",
+          "text": "CSSの記述については、各コンテンツごとに明確なコメントを付けてセクションを分けることで、チームでの共同開発や将来的な修正にも対応しやすい、保守性の高いコード設計を意識しました。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "wanko-awase",
+    "title": "ゲームアプリ「wanko-awase」",
+    "type": "website",
+    "subtype": "Web<br>アプリケーション",
+    "top_text": "カードをめくって同じ犬の写真を合わせる神経衰弱ゲームアプリです。",
+    "box_btn": {
+      "website": "https://wanko-awase.vercel.app/",
+      "source": "https://github.com/mayu-oshima/wanko-awase/"
+    },
+    "main_photo": "__BASE_URL__assets/works/images/wanko-awase.png",
+    "tech_stack": [
+      "React",
+      "JavaScript（TypeScript）",
+      "HTML・CSS"
+    ],
+    "scope": [
+      "設計",
+      "コーディング"
+    ],
+    "target_purpose": "犬好きな家族に楽しんでもらいたくて、愛犬の写真を使った記憶ゲームを制作しました。<br>身近な人が笑顔になるような、親しみやすく遊びやすいアプリを目指しました。",
+    "point": {
+      "top_text": "React＋TypeScriptで制作しました。以下の点を特に工夫しています。",
+      "sub_item": [
+        {
+          "ttl": "状態管理の整理",
+          "text": "カードの状態、レベル、タイマーなど、役割ごとに useState を分けて管理しています。<br>関連するstateはオブジェクトとして一つにまとめることで読みやすく保守性の高い構成にしました。"
+        },
+        {
+          "ttl": "タイマーの精度向上",
+          "text": "0.01秒単位のタイマーを setInterval で実装。浮動小数点誤差を抑えるため Math.round と .toFixed(2) を併用して安定した表示を実現しました。"
+        },
+        {
+          "ttl": "ゲーム性とUXへの配慮",
+          "text": "難易度によってカード数が変わり、プレイの幅が広がる設計。操作のタイミングやアニメーションも自然になるよう微調整しています。"
+        },
+        {
+          "ttl": "styled-componentsで動的な見た目に",
+          "text": "カードをひっくり返したり、全て正解した時などの状態に応じて見た目を切り替え、ReactのPropsとスタイルが連動するよう工夫しました。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "piano",
+    "title": "「白石ピアノ教室」（架空）",
+    "type": "banner",
+    "subtype": "バナー",
+    "top_text": "架空のピアノ教室の宣伝バナーです。",
+    "main_photo": "__BASE_URL__assets/works/images/piano.jpg",
+    "tech_stack": [
+      "Photoshop",
+      "Illustrator"
+    ],
+    "scope": [
+      "デザイン"
+    ],
+    "target_purpose": "習い事を始めたい3〜10歳くらいの子供、両親をターゲットとして、「小さい子供が好きそうな楽しくて明るくポップなデザイン」というご要望をいただいたことを想定して制作しました。",
+    "point": {
+      "top_text": "賑やかで楽しそうなイメージを持ってもらえるよう、キャッチコピーは2種類のフォントと色を組み合わせたり、笑顔でピアノを弾いている女の子の写真を選びました。色合いも子供に好まれるような明るい色を使用しました。"
+    }
+  },
+  {
+    "id": "fashion",
+    "title": "ファッション通販サイト「FASHION SHOP」（架空）",
+    "type": "banner",
+    "subtype": "バナー",
+    "top_text": "架空のファッション通販サイトのセール企画バナーです。",
+    "main_photo": "__BASE_URL__assets/works/images/fashion.jpg",
+    "tech_stack": [
+      "Photoshop",
+      "Illustrator"
+    ],
+    "scope": [
+      "デザイン"
+    ],
+    "target_purpose": "20〜30代の女性をターゲットとして、「洗練されたオシャレなイメージ」という要望をいただいたことを想定して制作しました。",
+    "point": {
+      "top_text": "装飾をシンプルにしたり、背の高いフォントを使用することで洗練されたオシャレな印象を表現しました。実際に他のバナーと並べ比較し、その中でも目立つように色合いを調整しました。"
+    }
+  },
+  {
+    "id": "headphone",
+    "title": "音響機器メーカー（架空）",
+    "type": "banner",
+    "subtype": "バナー",
+    "top_text": "架空の音響機器メーカーのヘッドホンのバナーです。",
+    "main_photo": "__BASE_URL__assets/works/images/headphone.jpg",
+    "tech_stack": [
+      "Photoshop",
+      "Illustrator"
+    ],
+    "scope": [
+      "デザイン"
+    ],
+    "target_purpose": "臨場感あるヘッドホンが欲しい人をターゲットとして、「商品のワイヤレスヘッドホンの売りである迫力ある音質をアピールしたい」という要望をいただいたことを想定して制作しました。",
+    "point": {
+      "top_text": "迫力ある音質であることが伝わるように、フォントを斜体にして動きを出し、「迫力音質」とブロックのように配置してインパクトを出しました。"
+    }
+  },
+  {
+    "id": "milky",
+    "title": "カフェ「Milky Cafe」（架空）",
+    "type": "banner",
+    "subtype": "バナー",
+    "top_text": "架空のカフェ「Milky Cafe」の期間限定商品のバナーです。",
+    "main_photo": "__BASE_URL__assets/works/images/milky.jpg",
+    "tech_stack": [
+      "Photoshop",
+      "Illustrator"
+    ],
+    "scope": [
+      "デザイン"
+    ],
+    "target_purpose": "女性をターゲットとして、「明るく軽やかで華やかな印象。商品の「桜ミルクティー」の「桜」のイメージを前面に出して欲しい。」という要望をいただいたことを想定して制作しました。",
+    "point": {
+      "top_text": "華やかな印象になるようなフォントを選び、加工して軽やかな雰囲気を加わえました。また、女性に好まれるような可愛らしく華やかな装飾や色を使用しました。商品の写真は美味しそうにみえるよう、大きめに載せました。"
+    }
+  }
+]

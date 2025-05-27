@@ -1,5 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
+const alreadyShown = sessionStorage.getItem("greetingShown");
+const greeting = document.querySelector(".first_greeting");
+
+
+if (!alreadyShown) {
 document.body.classList.add("no-scroll"); // 最初にスクロール禁止
 
 const tl = gsap.timeline();
@@ -30,7 +35,15 @@ tl.to(".first_greeting", {
 // アニメーション終了後にスクロール許可
 tl.call(() => {
   document.body.classList.remove("no-scroll");
+
+  // アニメーション済みを記録
+  sessionStorage.setItem("greetingShown", "true");
 });
+
+} else {
+  // アニメーション済みなら greeting を即非表示
+  greeting.style.display = "none";
+}
 
 document.querySelectorAll(".ul_works > li, .ul_skill > li").forEach((el) => {
   gsap.fromTo(
