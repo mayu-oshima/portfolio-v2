@@ -6,8 +6,8 @@
     "subtype": "Webサイト",
     "top_text": "現在ご覧いただいているサイトです",
     "box_btn": {
-      "website": "https://closetta.vercel.app/",
-      "source": "https://github.com/mayu-oshima/closetta/"
+      "website": "https://omser.conohawing.com/portfolio-v2/",
+      "source": "https://github.com/mayu-oshima/portfolio-v2/"
     },
     "main_photo": "__BASE_URL__assets/works/images/portfolio/main.png",
     "tech_stack": [
