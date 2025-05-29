@@ -104,7 +104,8 @@
     "tech_stack": [
       "WordPress(CMS)",
       "PHP",
-      "JavaScript"
+      "JavaScript",
+      "Git"
     ],
     "scope": [
       "設計",
@@ -116,53 +117,125 @@
       "top_text": "WordPressを用いて飲食店サイトのCMS構築を行いました。店舗スタッフでも更新可能な構成を意識しつつ、デザイン・機能性の両面で工夫を加えています。",
       "sub_item": [
         {
-          "ttl": "「お知らせ」セクションをカスタムフィールドで管理",
-          "text": "メニュー一覧はWordPressの投稿機能を活用し、カスタムフィールドを使ってサムネイル・価格・税込価格を一括管理。投稿を追加するだけで新メニューを簡単に個別ページと一覧ページへ反映できます。"
+          "ttl": "柔軟なカスタムフィールドで管理できる動的コンテンツ生成",
+          "text": "Advanced Custom Fieldsの繰り返しフィールドを活用し、特徴紹介やお知らせ、アクセス情報など多彩なコンテンツを管理画面から簡単に編集・追加可能。運用効率と更新の手軽さを両立しました。"
         },
         {
-          "ttl": "メニュー管理を投稿タイプで実装",
-          "text": "最大5件までのニュースを表示できるよう、カスタムフィールドをループで処理。管理画面から日付とテキストを入力するだけでお知らせを更新でき、静的HTML修正が不要な設計としています。"
+          "ttl": "投稿タイプを活かした商品一覧と詳細ページの構築",
+          "text": "カスタムフィールドで価格や画像、説明文を一元管理し、ループ処理でメニュー一覧を動的に生成。商品ごとの詳細ページも整ったレイアウトでわかりやすく表示し、ユーザーの利便性を向上させました。"
+        },
+        {
+          "ttl": "JavaScriptによる送信前チェックでユーザービリティ向上",
+          "text": "問い合わせフォームの必須項目をクライアント側でチェックし、入力漏れを防止。分かりやすい警告表示と送信ブロックでユーザーのストレス軽減と正確な問い合わせ受け取りを実現しました。"
         },
         {
           "ttl": "動きをつけたビジュアル構成",
           "text": "サイトに訪問した人が最初に見るTOPページには、ユーザーのスクロールに応じてコンテンツが出てくる動きをつけて、店内に入っていくような温かみとリズム感を与えるようにして、視覚的な印象強化とユーザーの滞在時間増加を図っています。"
-        }
+        }      
       ]
     },
     "memo": [
       {
-        "text": "新メニューを投稿で追加すると個別ページと一覧ページへ反映",
+        "text": "画像・商品名・説明文・価格を入力するだけで、一覧にも詳細ページにも自動で反映されます。管理も簡単です。",
         "box_img": {
           "left": [
             {
-              "src": "__BASE_URL__assets/works/images/omelet-rice/menu_edit.png",
+              "src": "__BASE_URL__assets/works/images/omelet-rice/menu-edit.png",
               "alt": "「メニュー」の編集画面"
             }
           ],
           "right": [
             {
-              "src": "__BASE_URL__assets/works/images/omelet-rice/menu.png",
+              "src": "__BASE_URL__assets/works/images/omelet-rice/menu-front01.png",
               "alt": "メニュー個別ページ"
             },
             {
-              "src": "__BASE_URL__assets/works/images/omelet-rice/menu2.png",
+              "src": "__BASE_URL__assets/works/images/omelet-rice/menu-front02.png",
               "alt": "メニュー一覧ページ"
             }
           ]
         }
       },
       {
-        "text": "「お知らせ」をカスタムフィールドで管理",
+        "text": "日付と内容を入力するだけで、最新情報を簡単に更新できる仕組みにしています。並び替えもドラッグで可能です。<br>最新のお知らせを日付付きで一覧表示。運営からの情報をユーザーに分かりやすく届けます。",
         "box_img": {
           "left": [
             {
-              "src": "__BASE_URL__assets/works/images/omelet-rice/news_edit.png",
+              "src": "__BASE_URL__assets/works/images/omelet-rice/top-news-edit.png",
               "alt": "「お知らせ」の編集画面"
             }
           ],
           "right": [
             {
-              "src": "__BASE_URL__assets/works/images/omelet-rice/news.png",
+              "src": "__BASE_URL__assets/works/images/omelet-rice/top-news-front.png",
+              "alt": "TOPページ「お知らせ」"
+            }
+          ]
+        }
+      },
+      {
+        "text": "繰り返しフィールドを使って、店舗の特徴を柔軟に追加・編集できるようにしています。<br>設定した内容が動きのあるビジュアルとともに反映され、魅力的に訴求されます。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/top-spotlight-edit.png",
+              "alt": "「お知らせ」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/top-spotlight-front.png",
+              "alt": "TOPページ「お知らせ」"
+            }
+          ]
+        }
+      },
+      {
+        "text": "メインコンテンツもサブコンテンツも、階層構造で柔軟に管理できるように設計しました。画像・見出し・説明文もすべて編集可能です。<br>見出しごとにセクションが分かれており、写真付きで店舗の特徴を丁寧に紹介しています。上部の目次リンクで目的の情報にすぐアクセスできます。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/about-edit.png",
+              "alt": "「お知らせ」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/about-front.png",
+              "alt": "TOPページ「お知らせ」"
+            }
+          ]
+        }
+      },
+      {
+        "text": "所在地・地図・交通手段はすべてカスタムフィールドで管理されており、更新作業も簡単です。<br>住所・地図・交通案内が見やすく整理されており、ユーザーが迷わず店舗にアクセスできる設計にしています。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/access-edit.png",
+              "alt": "「お知らせ」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/access-front.png",
+              "alt": "TOPページ「お知らせ」"
+            }
+          ]
+        }
+      },
+      {
+        "text": "必須項目の未入力時には、JavaScriptによって送信をブロックしエラーメッセージを表示します。ユーザーの入力漏れを防ぎます。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/contact-code.png",
+              "alt": "「お知らせ」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/omelet-rice/contact-front.png",
               "alt": "TOPページ「お知らせ」"
             }
           ]
