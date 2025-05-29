@@ -19,7 +19,6 @@ import browserSyncModule from 'browser-sync';
 import fs from 'fs';
 
 import replace from 'gulp-replace';
-import dotenv from 'dotenv';
 
 const sass = gulpSass(sassCompiler);
 const browserSync = browserSyncModule.create();
@@ -120,8 +119,7 @@ function watchFiles() {
 
 // 本番用ビルドタスク
 function build(done) {
-  dotenv.config({ path: '.env.production' });
-  BASE_URL = process.env.BASE_URL;
+  BASE_URL = '/portfolio-v2/';
   DEST_FILE = 'build';
 
   return parallel(
