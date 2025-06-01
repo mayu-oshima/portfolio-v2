@@ -287,68 +287,111 @@
     }
   },
   {
-    "id": "kobayasi",
+    "id": "kobayashi",
     "title": "総合病院「小林病院」（架空）",
     "type": "website",
     "subtype": "Webサイト",
     "top_text": "架空の総合病院のWebサイトです。",
     "box_btn": {
-      "website": "https://portfolio-mayu-oshimas-projects.vercel.app/work/website/kobayasi/",
-      "source": "https://github.com/mayu-oshima/closetta/"
+      "website": "https://omser.conohawing.com/kobayashi/",
+      "source": "https://github.com/mayu-oshima/kobayashi/"
     },
-    "main_photo": "__BASE_URL__assets/works/images/kobayashi.png",
+    "main_photo": "__BASE_URL__assets/works/images/kobayashi/main.png",
     "tech_stack": [
-      "JavaScript （TypeScript）",
-      "HTML・CSS"
+      "Gulp",
+      "JavaScript",
+      "HTML(EJS)",
+      "CSS(Sass)",
+      "Git"
     ],
     "scope": [
       "設計",
-      "コーディング"
+      "コーディング",
+      "ビルド環境構築（Gulp）"
     ],
     "target_purpose": "総合病院なので幅広い年齢層の方々がターゲットとなるため、どんな人でも使いやすく分かりやすい信頼と安心感を感じるようなサイトを目指しました。",
     "point": {
-      "top_text": "React + TypeScriptでファッション通販サイトを制作しました。以下の点を特に工夫しています。",
+      "top_text": "以下の点を特に工夫しています。",
       "sub_item": [
+        {
+          "ttl": "共通コンポーネント化による保守性向上",
+          "text": "メタ情報, ヘッダー, フッター, パンくずリストなどのセクションをEJSのコンポーネントとして分割しているため、デザインの一貫性を保ちつつ、メンテナンス性が高い構造になっています。"
+        },
+        {
+          "ttl": "保守性と拡張性を意識したお知らせ一覧の実装",
+          "text": "複数のお知らせを効率的に管理・表示するため、テンプレートエンジンを用いた繰り返し処理を活用し、コードの簡潔化とメンテナンス性の向上を図りました。<br>お知らせデータは配列で定義し、それをループ処理でHTMLに展開することで、件数の増減や内容の変更にも柔軟に対応可能です。"
+        },
+        {
+          "ttl": "保守性を意識したCSS設計で崩れにくいレイアウトを実現",
+          "text": "コンテンツの増減にも柔軟に対応できるCSS設計を意識し、レイアウト崩れを防ぐことで保守性の高い実装を心がけました。"
+        },
         {
           "ttl": "高齢者・弱視ユーザーへの配慮設計",
           "text": "視力の弱い人や高齢者にも配慮し、JavaScriptを使って文字サイズを動的に変更できるボタンを実装しました。CSSのrem単位をベースに設計することで、全体のレイアウト崩れを防ぎつつ、ユーザーが視認性を調整できるようにしました。"
         }
       ]
-    }
-  },
-  {
-    "id": "sala",
-    "title": "美容院「sala」（架空）",
-    "type": "website",
-    "subtype": "Webサイト",
-    "top_text": "架空の美容院のWebサイトです。",
-    "box_btn": {
-      "website": "https://portfolio-mayu-oshimas-projects.vercel.app/work/website/sala/",
-      "source": "https://github.com/mayu-oshima/closetta/"
     },
-    "main_photo": "__BASE_URL__assets/works/images/sala.png",
-    "tech_stack": [
-      "JavaScript （TypeScript）",
-      "HTML・CSS"
-    ],
-    "scope": [
-      "設計",
-      "コーディング"
-    ],
-    "target_purpose": "20〜40代の男女をターゲットとして新規顧客の獲得とリピートユーザーの再訪を目指しました。<br>白黒でシンプルでクールにまとめたサイトにました。",
-    "point": {
-      "top_text": "以下の点を特に工夫しています。",
-      "sub_item": [
-        {
-          "ttl": "コンバージョン最適化",
-          "text": "予約ボタンを右下に固定して、ユーザーがページ内のどこにいてもすぐに予約へアクセスできるようにし、ユーザビリティを高めることでコンバージョン率の向上を狙いました。"
-        },
-        {
-          "ttl": "保守性を考えたコーディング",
-          "text": "CSSの記述については、各コンテンツごとに明確なコメントを付けてセクションを分けることで、チームでの共同開発や将来的な修正にも対応しやすい、保守性の高いコード設計を意識しました。"
+    "memo": [
+      {
+        "text": "全ページ共通の&lt;head&gt;タグをテンプレート化することで、保守性を向上させました。<br>各ページ固有のCSS・JSやtitle・descriptionなどは、個別に設定・出力できる構成にしており、共通部分とページごとの差分を明確に管理できる設計にしています。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/kobayashi/head_code01.png",
+              "alt": "「メニュー」の編集画面"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/kobayashi/head_code02.png",
+              "alt": "「メニュー」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/kobayashi/head_dist.png",
+              "alt": "メニュー個別ページ"
+            }
+          ]
         }
-      ]
-    }
+      },
+      {
+        "text": "EJSのJSを埋め込める仕組みを活用して、お知らせのコンテンツは繰り返し処理で出力しています。デザインの変更や調整の時間短縮を実現させました。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/kobayashi/news_code01.png",
+              "alt": "「メニュー」の編集画面"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/kobayashi/news_code02.png",
+              "alt": "「メニュー」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/kobayashi/news_front.png",
+              "alt": "メニュー個別ページ"
+            }
+          ]
+        }
+      },
+      {
+        "text": "更新や修正で文章量が増えた場合も、レイアウトが崩れない設計になるように意識してコーディングしました。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/kobayashi/time_before.png",
+              "alt": "「メニュー」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/kobayashi/time_after.png",
+              "alt": "メニュー個別ページ"
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "id": "wanko-awase",
