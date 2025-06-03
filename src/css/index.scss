@@ -167,11 +167,15 @@ header {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  @include mixin.sp {
+    height: auto;
+  }
   &.sec_p {
     padding-top: 13.33vw;
     height: auto;
     @include mixin.sp {
       padding-top: 40vw;
+      padding-bottom: 30vw;
     }
   }
   .ttl_h1 {
@@ -653,6 +657,9 @@ section.works {
         max-width: none;
         display: block;
         margin-right: 5.33vw;
+        @include mixin.sp {
+          width: 600vw;
+        }
       }
     }
   }
@@ -667,6 +674,9 @@ section.skill {
   position: relative;
   padding-bottom: 38.33vw;
   overflow: hidden;
+  @include mixin.sp {
+    padding-bottom: 68.33vw;
+  }
   &::after {
     content: '';
     display: block;
@@ -737,7 +747,9 @@ section.skill {
     animation: 10s linear infinite rotation;
     z-index: -10;
     @include mixin.sp {
-
+      width: 80vw;
+      right: -25vw;
+      bottom: -20vw;
     }
   }
 }
