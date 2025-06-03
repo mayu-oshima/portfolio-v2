@@ -395,7 +395,7 @@
   },
   {
     "id": "wanko-awase",
-    "title": "ゲームアプリ「wanko-awase」",
+    "title": "ゲームアプリ「わんこあわせ」",
     "type": "website",
     "subtype": "Web<br>アプリケーション",
     "top_text": "カードをめくって同じ犬の写真を合わせる神経衰弱ゲームアプリです。",
@@ -403,11 +403,13 @@
       "website": "https://wanko-awase.vercel.app/",
       "source": "https://github.com/mayu-oshima/wanko-awase/"
     },
-    "main_photo": "__BASE_URL__assets/works/images/wanko-awase.png",
+    "main_photo": "__BASE_URL__assets/works/images/wanko-awase/main.png",
     "tech_stack": [
       "React",
       "JavaScript（TypeScript）",
-      "HTML・CSS"
+      "HTML・CSS",
+      "Git",
+      "Vercel"
     ],
     "scope": [
       "設計",
@@ -434,7 +436,44 @@
           "text": "カードをひっくり返したり、全て正解した時などの状態に応じて見た目を切り替え、ReactのPropsとスタイルが連動するよう工夫しました。"
         }
       ]
-    }
+    },
+    "memo": [
+      {
+        "text": "カードの状態に関する情報（カードの組数・シャッフル結果・最初にめくったカード・現在表になっているカード・クリア済みのカード）を、オブジェクトとして一括で管理することで、状態管理を簡潔にし、可読性と保守性を高めました。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/wanko-awase/card-state.png",
+              "alt": "カードの状態管理"
+            }
+          ],
+          "right": []
+        }
+        
+      },
+      {
+        "text": "難易度（easy / normal / hard）の選択に応じてカードのペア数（3〜5セット）が変化するように状態を管理し、初心者から上級者まで幅広く楽しめる構成としました。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/wanko-awase/level_code.png",
+              "alt": "難易度によってカードのセット数を振り分けるコード"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/wanko-awase/level_front01.png",
+              "alt": "「易しい」レベルのゲーム画面"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/wanko-awase/level_front02.png",
+              "alt": "「難しい」レベルのゲーム画面"
+            }
+          ]
+        }
+        
+      }
+    ]
   },
   {
     "id": "piano",
