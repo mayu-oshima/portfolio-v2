@@ -11,6 +11,7 @@ hamburger.addEventListener("click", () => {
   
   if (isOpen) {
     navMenu.classList.add("active");
+    hamburger.classList.add("active");
     
     gsap.fromTo(
       menuItems,
@@ -30,7 +31,10 @@ hamburger.addEventListener("click", () => {
       duration: 0.3,
       stagger: 0.1,
       ease: "power2.in",
-      onComplete: () => navMenu.classList.remove("active")
+      onComplete: () => {
+        navMenu.classList.remove("active");
+        hamburger.classList.remove("active");
+      }
     });
   }
 });
@@ -38,5 +42,6 @@ hamburger.addEventListener("click", () => {
 menuItemLinks.forEach(link => {
   link.addEventListener('click', () => {
     navMenu.classList.remove("active");
+    hamburger.classList.remove("active");
   });
 })
