@@ -245,7 +245,7 @@
   },
   {
     "id": "closetta",
-    "title": "洋服通販サイト「closetta」（架空）",
+    "title": "洋服通販サイト「CLOSETTA」（架空）",
     "type": "website",
     "subtype": "Web<br>アプリケーション",
     "top_text": "架空の洋服通販サイトです。",
@@ -253,7 +253,7 @@
       "website": "https://closetta.vercel.app/",
       "source": "https://github.com/mayu-oshima/closetta/"
     },
-    "main_photo": "__BASE_URL__assets/works/images/closetta.png",
+    "main_photo": "__BASE_URL__assets/works/images/closetta/main.png",
     "tech_stack": [
       "React",
       "JavaScript （TypeScript）",
@@ -284,7 +284,97 @@
           "text": "styled-componentsで各パーツをコンポーネント単位に分離。<br>配色やタイポグラフィ、余白などを整え、ECサイトらしい清潔感ある見た目に仕上げました。"
         }
       ]
-    }
+    },
+    "memo": [
+      {
+        "text": "画像・商品名・価格などの商品情報をJSONで一元管理し、一覧ページ・詳細ページの両方に反映させました。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/json_code.png",
+              "alt": "「メニュー」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/json_front01.png",
+              "alt": "メニュー個別ページ"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/json_front02.png",
+              "alt": "メニュー一覧ページ"
+            }
+          ]
+        }
+      },
+      {
+        "text": "ユーザー認証にはFirebaseを使用し、ログイン後はヘッダーに登録済みのメールアドレスが表示されるようにしました。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/login_code01.png",
+              "alt": "「メニュー」の編集画面"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/login_code02.png",
+              "alt": "「メニュー」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/login_front01.png",
+              "alt": "メニュー個別ページ"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/login_front02.png",
+              "alt": "メニュー一覧ページ"
+            }
+          ]
+        }
+      },
+      {
+        "text": "React Context を使ってカートの状態（商品情報や数量など）をグローバル State として管理しました。<br>カートに商品を追加すると、ヘッダーのカートアイコンに現在の数量を示すバッジが表示され、カートページには追加した商品が一覧で表示されるようにしています。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/cart_code.png",
+              "alt": "「メニュー」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/cart_front.png",
+              "alt": "メニュー個別ページ"
+            }
+          ]
+        }
+      },
+      {
+        "text": "FirebaseのFirestoreを使用して、ユーザーのお届け先やお支払い方法などの情報を保存できるようにしました。<br>2回目以降の注文では、前回の情報をもとに入力画面をスキップして直接確認画面へ遷移し、ユーザーの手間を軽減しています。また、『変更』ボタンから入力画面に移動した場合は、前回入力した内容があらかじめ反映された状態で表示され、必要に応じて修正できるようにすることで、利便性を向上させました。",
+        "box_img": {
+          "left": [
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/firestore_code01.png",
+              "alt": "「メニュー」の編集画面"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/firestore_code02.png",
+              "alt": "「メニュー」の編集画面"
+            }
+          ],
+          "right": [
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/firestore_front01.png",
+              "alt": "メニュー個別ページ"
+            },
+            {
+              "src": "__BASE_URL__assets/works/images/closetta/firestore_front02.png",
+              "alt": "メニュー一覧ページ"
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "id": "kobayashi",
